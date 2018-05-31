@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OnboardingSlide" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.52156862749999999" green="0.73333333329999995" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="146" y="118"/>
+        </scene>
+        <!--On BoardVC-->
+        <scene sceneID="s1I-i7-xlb">
+            <objects>
+                <viewController storyboardIdentifier="OnBoardVC" id="pki-G3-iiF" customClass="OnBoardVC" customModule="OnboardingSlide" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wbk-Z5-1E9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UK1-ZA-JZ3">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <connections>
+                                    <outlet property="delegate" destination="pki-G3-iiF" id="Z3Y-Rs-teN"/>
+                                </connections>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="EXM-QA-p8s">
+                                <rect key="frame" x="154" y="607" width="67" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="NWf-7L-gB4"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" red="0.99215686270000003" green="0.3411764706" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.52156862749999999" green="0.73333333329999995" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZjA-GB-ore">
+                                <rect key="frame" x="311" y="605.5" width="40" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="7gG-IC-rhm"/>
+                                    <constraint firstAttribute="height" constant="40" id="jMO-k6-uyQ"/>
+                                </constraints>
+                                <state key="normal" image="nextIcon">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextBtn:" destination="pki-G3-iiF" eventType="touchUpInside" id="qZu-0D-fke"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yui-jz-gk4" firstAttribute="trailing" secondItem="UK1-ZA-JZ3" secondAttribute="trailing" id="3K5-mt-NCI"/>
+                            <constraint firstItem="UK1-ZA-JZ3" firstAttribute="top" secondItem="yui-jz-gk4" secondAttribute="top" id="B7g-VW-ANq"/>
+                            <constraint firstItem="yui-jz-gk4" firstAttribute="trailing" secondItem="ZjA-GB-ore" secondAttribute="trailing" constant="24" id="Cuw-EO-piS"/>
+                            <constraint firstItem="yui-jz-gk4" firstAttribute="bottom" secondItem="UK1-ZA-JZ3" secondAttribute="bottom" id="G4B-8Q-y49"/>
+                            <constraint firstItem="ZjA-GB-ore" firstAttribute="centerY" secondItem="EXM-QA-p8s" secondAttribute="centerY" id="G4f-Ix-PJU"/>
+                            <constraint firstItem="yui-jz-gk4" firstAttribute="bottom" secondItem="EXM-QA-p8s" secondAttribute="bottom" constant="23" id="G9L-2c-b4r"/>
+                            <constraint firstItem="EXM-QA-p8s" firstAttribute="centerX" secondItem="yui-jz-gk4" secondAttribute="centerX" id="IgT-zy-KVm"/>
+                            <constraint firstItem="UK1-ZA-JZ3" firstAttribute="leading" secondItem="yui-jz-gk4" secondAttribute="leading" id="XqI-Rx-NIn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yui-jz-gk4"/>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="EXM-QA-p8s" id="NzF-qa-cRJ"/>
+                        <outlet property="scrollView" destination="UK1-ZA-JZ3" id="ev5-4u-OKP"/>
+                        <outlet property="startButton" destination="ZjA-GB-ore" id="4Rc-A9-qIK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tdg-3h-zJN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="866" y="119"/>
+        </scene>
+        <!--SecondVC-->
+        <scene sceneID="ZA4-7q-Gdk">
+            <objects>
+                <viewController storyboardIdentifier="SecondVC" id="8Ez-Nw-YXK" customClass="SecondVC" customModule="OnboardingSlide" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VBs-fo-X7f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second vc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFZ-dZ-ud8">
+                                <rect key="frame" x="147" y="323" width="81" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DFZ-dZ-ud8" firstAttribute="centerX" secondItem="VBs-fo-X7f" secondAttribute="centerX" id="42U-vb-5j6"/>
+                            <constraint firstItem="DFZ-dZ-ud8" firstAttribute="centerY" secondItem="VBs-fo-X7f" secondAttribute="centerY" id="4mD-kL-dOg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="h3r-VG-sfF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2he-gx-eAm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1636" y="118"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="nextIcon" width="24" height="24"/>
+    </resources>
+</document>
