@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        UserDefaults.standard.set(false, forKey: "onboardingComplete")
+        //UserDefaults.standard.set(false, forKey: "onboardingComplete")
     }
     
     override func viewDidAppear(_ animated: Bool) {
